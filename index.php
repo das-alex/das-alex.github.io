@@ -18,6 +18,19 @@
                    <li><a href="">Раздел четыре</a></li>
                </ul>
            </nav>
+           <?php
+            $f=fopen("stat.dat","a+");
+            flock($f,LOCK_EX);
+            $count=fread($f,100);
+            @$count++;
+            ftruncate($f,0);
+            fwrite($f,$count);
+            fflush($f);
+            flock($f,LOCK_UN);
+            fclose($f);
+
+            echo '<p class="view">Количество просмотров: '.$count.'</p>'; 
+            ?>
        </section>
        <section class="right">
           <h2>Отзывы пользователей</h2>
