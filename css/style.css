@@ -7,6 +7,10 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+a {
+	outline: none;
+}
+
 .flex_container {
 	display: flex;
 	flex-direction: column;
@@ -57,6 +61,11 @@ body {
 	padding: 2px 12px;
 	line-height: 1.7;
 	font-size: 14px;
+}
+
+.header_middle a {
+	color: antiquewhite;
+	text-decoration: none;
 }
 
 .header_middle .active {
